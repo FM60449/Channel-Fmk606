@@ -44,13 +44,13 @@ function ask(question) {
     return new Promise(resolve => rl.question(question, ans => { rl.close(); resolve(ans.trim()); }));
 }
 async function main() {
-    const UUID = await getVariableValue('UUID', 'aaaaaaa7-bbbb-7ccc-accc-eeeeeeeeeee7'); // 为保证安全隐蔽，建议留空，可在Node.js界面下的环境变量添加处（Environment variables）,点击ADD VARIABLE，修改变量
+    const UUID = await getVariableValue('UUID', '1b1ae757-d4ce-4d42-8b7a-9101e8d7b8ef'); // 为保证安全隐蔽，建议留空，可在Node.js界面下的环境变量添加处（Environment variables）,点击ADD VARIABLE，修改变量
     console.log('你的UUID:', UUID);
 
     const PORT = await getVariableValue('PORT', '443');// 为保证安全隐蔽，建议留空，可在Node.js界面下的环境变量添加处（Environment variables）,点击ADD VARIABLE，修改变量
     console.log('你的端口:', PORT);
 
-    const DOMAIN = await getVariableValue('DOMAIN', 'anisa-topa-777topnet-435433143277.europe-west1.run.app');// 为保证安全隐蔽，建议留空，可在Node.js界面下的环境变量添加处（Environment variables）,点击ADD VARIABLE，修改变量
+    const DOMAIN = await getVariableValue('DOMAIN', 'channel-fmk606-561401259028.europe-west4.run.app');// 为保证安全隐蔽，建议留空，可在Node.js界面下的环境变量添加处（Environment variables）,点击ADD VARIABLE，修改变量
     console.log('你的域名:', DOMAIN);
 
     const httpServer = http.createServer((req, res) => {
